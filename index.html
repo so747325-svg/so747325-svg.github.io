@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Portfolio | Your Name</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #243047;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #245b70;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #287b91;
+    }
+
+    .hero {
+      padding: 100px 10%;
+      background: #eaf3f5;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin: 15px 0;
+      color: #173e50;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: #536575;
+    }
+
+    .tag {
+      color: #287b91;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #245b70;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 75px 10%;
+    }
+
+    h2 {
+      color: #173e50;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .about {
+      max-width: 850px;
+    }
+
+    .skills, .projects, .experience {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #e5eaf0;
+    }
+
+    .card h3 {
+      color: #245b70;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #287b91;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .light {
+      background: #eef3f6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #173e50;
+      color: white;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MY PORTFOLIO</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">BUSINESS INTELLIGENCE & ANALYTICS</div>
+  <h1>Turning Data Into<br>Meaningful Insights.</h1>
+  <p>
+    Hello! I'm Your Name, a graduate student passionate
+    about data analytics, business intelligence, and
+    using technology to solve real-world problems.
+  </p>
+  <a href="#projects" class="button">Explore My Projects</a>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>
+      I am pursuing a Master of Science in Business
+      Intelligence & Analytics at Saint Joseph's University.
+      My academic interests include data science, predictive
+      analytics, statistical modeling, and data visualization.
+    </p>
+    <br>
+    <p>
+      I enjoy exploring how data can support informed
+      decision-making, improve business processes, and
+      uncover opportunities for innovation. Through my
+      coursework and professional experiences, I continue
+      developing my technical and analytical skills.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="light">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div class="card">
+      <h3>Programming</h3>
+      <p>R, Python, SQL</p>
+    </div>
+    <div class="card">
+      <h3>Data Visualization</h3>
+      <p>Power BI, Tableau, Excel</p>
+    </div>
+    <div class="card">
+      <h3>Analytics</h3>
+      <p>Predictive Modeling, Statistical Analysis, Machine Learning</p>
+    </div>
+    <div class="card">
+      <h3>Tools & Technologies</h3>
+      <p>SAS Viya, Snowflake, GitHub</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>R Programming: Janitor Package</h3>
+      <p>
+        Exploring the janitor package in R for data cleaning,
+        organization, and efficient data analysis.
+      </p>
+      <a href="#">View Presentation →</a>
+    </div>
+
+    <div class="card">
+      <h3>Academic Project 2</h3>
+      <p>
+        Add a description of a data analytics or programming
+        project completed in a previous course.
+      </p>
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>Academic Project 3</h3>
+      <p>
+        Add another project showcasing your analytical,
+        statistical, or technical abilities.
+      </p>
+      <a href="#">View Project →</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="light">
+  <h2>Experience & Education</h2>
+  <div class="experience">
+    <div class="card">
+      <h3>Graduate Studies</h3>
+      <p>
+        Saint Joseph's University<br>
+        MS Business Intelligence & Analytics<br>
+        Expected Graduation: May 2027
+      </p>
+    </div>
+    <div class="card">
+      <h3>Professional Experience</h3>
+      <p>
+        Data Strategy & Automation Summer Associate<br>
+        Philadelphia Insurance Companies<br>
+        Summer 2026
+      </p>
+    </div>
+    <div class="card">
+      <h3>Campus Leadership</h3>
+      <p>
+        Graduate Assistant – Inclusive Excellence
+        & Institutional Effectiveness<br>
+        Saint Joseph's University
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's Connect</h2>
+  <p>
+    Interested in connecting about data analytics,
+    business intelligence, or professional opportunities?
+  </p>
+  <a class="button" href="mailto:YOUR_EMAIL">Email Me</a>
+  <a class="button" href="YOUR_LINKEDIN_URL">LinkedIn</a>
+  <a class="button" href="https://github.com/so747325-svg">GitHub</a>
+</section>
+
+<footer>
+  <p>© 2026 Your Name | Business Intelligence & Analytics Portfolio</p>
+</footer>
+
+</body>
+</html>
