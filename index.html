@@ -238,6 +238,17 @@ section h2 {
   margin-top: 25px;
 }
 
+.tableau-embed {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tableau-embed tableau-viz {
+  display: block;
+  width: 100%;
+  min-height: 750px;
+}
+
 footer {
   padding: 35px;
   text-align: center;
@@ -270,8 +281,19 @@ footer a {
   section {
     padding: 60px 8%;
   }
+
+  .tableau-embed tableau-viz {
+    min-height: 600px;
+  }
 }
 </style>
+
+<!-- TABLEAU EMBEDDING API -->
+<script
+  type="module"
+  src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+</script>
+
 </head>
 
 <body>
@@ -518,14 +540,14 @@ footer a {
   </div>
 </section>
 
-<!-- TABLEAU PUBLIC -->
+<!-- TABLEAU DASHBOARD -->
 
 <section id="tableau" class="light">
   <div class="section-label">DATA VISUALIZATION</div>
   <h2>Tableau Dashboards</h2>
 
   <p class="about-text">
-    Explore my data visualizations and dashboards
+    Explore my interactive data visualizations and dashboards
     created using Tableau. These projects demonstrate my
     ability to transform data into meaningful insights
     through analytical thinking and data storytelling.
@@ -533,22 +555,37 @@ footer a {
 
   <div class="tableau-card">
 
-    <div class="date">TABLEAU PUBLIC PORTFOLIO</div>
+    <div class="date">FEATURED DASHBOARD</div>
 
     <h3 style="color:#17384b; font-size:22px;">
-      Explore My Tableau Dashboards
+      Amazon Sales Dashboard
     </h3>
 
     <p>
-      Visit my Tableau Public profile to explore my collection
-      of interactive dashboards and data visualization projects.
+      An interactive dashboard exploring Amazon sales
+      performance through data visualization and
+      business intelligence.
     </p>
+
+    <div class="tableau-embed">
+
+      <tableau-viz
+        id="amazonDashboard"
+        src="https://public.tableau.com/views/AmazonSalesDashboard_17725604039880/Dashboard1"
+        width="100%"
+        height="750"
+        toolbar="bottom"
+        hide-tabs>
+      </tableau-viz>
+
+    </div>
 
     <div class="buttons">
       <a class="button primary"
          href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
-         target="_blank" rel="noopener noreferrer">
-        View All My Tableau Dashboards →
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore All My Tableau Dashboards →
       </a>
     </div>
 
