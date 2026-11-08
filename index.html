@@ -2,778 +2,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selynne Ochieng's data and analytics portfolio, featuring projects, experience, and data visualization work.">
+  <title>Selynne Ochieng | Data & Analytics Portfolio</title>
 
-<title>Selynne Ochieng | Data & Analytics Portfolio</title>
+  <style>
+    :root {
+      --navy: #142b43;
+      --teal: #2b8c88;
+      --light: #f5f8fa;
+      --text: #263746;
+      --muted: #667788;
+      --white: #ffffff;
+    }
 
-<style>
-:root {
-  --navy: #17384b;
-  --teal: #397c83;
-  --light: #f4f7f8;
-  --text: #344454;
-  --muted: #718096;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  line-height: 1.7;
-}
+    a {
+      color: var(--teal);
+      text-decoration: none;
+    }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 8%;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #e9eef0;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-.logo {
-  color: var(--navy);
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
+    .logo {
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
 
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-size: 13px;
-}
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-nav a:hover {
-  color: var(--teal);
-}
+    nav a {
+      color: var(--white);
+      font-size: 0.9rem;
+    }
 
-.hero {
-  padding: 110px 12%;
-  background: var(--light);
-}
+    .hero {
+      background: linear-gradient(135deg, #142b43, #245b70);
+      color: var(--white);
+      padding: 105px 8%;
+      text-align: center;
+    }
 
-.eyebrow, .section-label {
-  color: var(--teal);
-  font-size: 12px;
-  letter-spacing: 3px;
-  font-weight: bold;
-}
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.5rem);
+      margin-bottom: 12px;
+    }
 
-.hero h1 {
-  color: var(--navy);
-  font-size: clamp(45px, 7vw, 72px);
-  line-height: 1.15;
-  margin: 20px 0;
-}
+    .hero h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #b8e3df;
+      margin-bottom: 18px;
+    }
 
-.hero h2 {
-  color: var(--teal);
-  font-size: 23px;
-  font-weight: normal;
-  margin-bottom: 18px;
-}
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #e4edf2;
+    }
 
-.hero p, .about-text {
-  max-width: 750px;
-  color: var(--muted);
-}
+    .button {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      padding: 12px 23px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.2s;
+    }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 25px;
-}
+    .button:hover {
+      background: #247571;
+      text-decoration: none;
+    }
 
-.button {
-  display: inline-block;
-  padding: 11px 22px;
-  border: 1px solid var(--navy);
-  border-radius: 4px;
-  text-decoration: none;
-  color: var(--navy);
-  font-size: 13px;
-}
+    .button-outline {
+      background: transparent;
+      border: 1px solid var(--white);
+    }
 
-.button.primary {
-  background: var(--navy);
-  color: white;
-}
+    .button-outline:hover {
+      background: rgba(255,255,255,0.12);
+    }
 
-.button:hover {
-  opacity: .8;
-}
+    section {
+      padding: 65px 8%;
+      max-width: 1150px;
+      margin: auto;
+    }
 
-section {
-  padding: 75px 12%;
-  scroll-margin-top: 80px;
-}
+    section h2 {
+      color: var(--navy);
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
 
-section h2 {
-  color: var(--navy);
-  font-size: 32px;
-  margin: 10px 0 25px;
-}
+    .intro {
+      max-width: 850px;
+    }
 
-.light {
-  background: var(--light);
-}
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 9px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 14px rgba(20, 43, 67, 0.06);
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
-}
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
 
-.card {
-  background: white;
-  padding: 25px;
-  border: 1px solid #e5ebee;
-  border-radius: 7px;
-}
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
 
-.card h3 {
-  color: var(--navy);
-  margin-bottom: 9px;
-}
+    ul {
+      padding-left: 22px;
+      margin-top: 10px;
+    }
 
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-}
+    li {
+      margin-bottom: 7px;
+    }
 
-.date {
-  color: var(--teal);
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
+    .skill {
+      background: #e4efef;
+      color: var(--navy);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
 
-.tag {
-  background: #eaf1f2;
-  color: var(--teal);
-  padding: 5px 11px;
-  border-radius: 3px;
-  font-size: 11px;
-}
+    .project-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
 
-.timeline {
-  display: grid;
-  gap: 22px;
-}
+    .tableau-section {
+      background: #eaf2f3;
+      border-radius: 10px;
+      text-align: center;
+      padding: 40px 25px;
+    }
 
-.experience-card {
-  background: white;
-  padding: 26px;
-  border-left: 3px solid var(--teal);
-  border-radius: 5px;
-}
+    .tableau-section p {
+      max-width: 650px;
+      margin: 0 auto 20px;
+    }
 
-.experience-card h3 {
-  color: var(--navy);
-}
+    .contact {
+      text-align: center;
+    }
 
-.experience-card ul {
-  padding-left: 20px;
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 14px;
-}
+    .contact p {
+      margin-bottom: 12px;
+    }
 
-.experience-card li {
-  margin-bottom: 7px;
-}
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 22px;
+      font-size: 0.85rem;
+    }
 
-.project-link {
-  display: inline-block;
-  color: var(--teal);
-  font-size: 13px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 14px;
-}
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
 
-.award {
-  text-align: center;
-}
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
 
-.place {
-  font-size: 27px;
-  font-weight: bold;
-  color: var(--teal);
-}
+      .hero {
+        padding: 75px 7%;
+      }
 
-.tableau-card {
-  background: white;
-  border: 1px solid #e5ebee;
-  border-radius: 8px;
-  padding: 25px;
-  margin-top: 25px;
-}
-
-.tableauPlaceholder {
-  width: 100%;
-  position: relative;
-  margin-top: 20px;
-}
-
-.tableauPlaceholder object {
-  width: 100%;
-  height: 750px;
-}
-
-footer {
-  padding: 35px;
-  text-align: center;
-  background: var(--navy);
-  color: white;
-  font-size: 13px;
-}
-
-footer a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-@media(max-width: 700px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .hero {
-    padding: 75px 8%;
-  }
-
-  section {
-    padding: 60px 8%;
-  }
-
-  .tableauPlaceholder object {
-    height: 650px;
-  }
-}
-</style>
+      section {
+        padding: 45px 7%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+  <header>
+    <div class="logo">Selynne Ochieng</div>
 
-<header>
-  <div class="logo">SELYNNE OCHIENG</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#tableau">Tableau</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#tableau">Tableau</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <main>
 
-<!-- HOME -->
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <h1>Selynne Ochieng</h1>
+      <h2>Data & Analytics Portfolio</h2>
 
-<div class="hero">
-  <div class="eyebrow">
-    BUSINESS INTELLIGENCE · DATA ANALYTICS · DATA SCIENCE
-  </div>
-
-  <h1>Selynne<br>Ochieng.</h1>
-
-  <h2>Turning Data Into Meaningful Insights.</h2>
-
-  <p>
-    I'm a Business Intelligence & Analytics graduate student
-    with a background in actuarial science, data science,
-    and mathematics. I enjoy using data, analytical methods,
-    and technology to solve business problems and support
-    informed decision-making.
-  </p>
-
-  <div class="buttons">
-    <a href="#projects" class="button primary">Explore My Work</a>
-
-    <a href="https://www.linkedin.com/in/selynne-ochieng/"
-       target="_blank" rel="noopener" class="button">
-       LinkedIn
-    </a>
-  </div>
-</div>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="section-label">GET TO KNOW ME</div>
-  <h2>About Me</h2>
-
-  <div class="about-text">
-    <p>
-      My academic and professional journey brings together
-      actuarial science, mathematics, data science, and
-      business intelligence. I earned my Bachelor of Science
-      in Business Administration in Actuarial Science, with
-      minors in Data Science and Mathematics, from
-      Saint Joseph's University.
-    </p>
-
-    <br>
-
-    <p>
-      I am currently pursuing a Master of Science in
-      Business Intelligence & Analytics, alongside graduate
-      certificates in Data Analytics and Data Science.
-    </p>
-
-    <br>
-
-    <p>
-      Through experiences in insurance, analytics, and
-      higher education, I have developed an interest in
-      transforming complex information into actionable
-      insights, improving business processes, and supporting
-      data-driven decisions.
-    </p>
-  </div>
-
-  <div class="tags">
-    <span class="tag">Actuarial Science</span>
-    <span class="tag">Business Intelligence</span>
-    <span class="tag">Data Analytics</span>
-    <span class="tag">Data Science</span>
-    <span class="tag">Predictive Modeling</span>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education" class="light">
-  <div class="section-label">ACADEMIC BACKGROUND</div>
-  <h2>Education</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="date">EXPECTED MAY 2027</div>
-      <h3>Master of Science</h3>
-      <p>Business Intelligence & Analytics</p>
-      <p>Graduate Certificates in Data Analytics & Data Science</p>
-      <p>Saint Joseph's University</p>
-    </div>
-
-    <div class="card">
-      <div class="date">MAY 2025</div>
-      <h3>Bachelor of Science</h3>
-      <p>Business Administration – Actuarial Science</p>
-      <p>Minors in Data Science and Mathematics</p>
-      <p>Saint Joseph's University</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-  <div class="section-label">PROFESSIONAL JOURNEY</div>
-  <h2>Experience</h2>
-
-  <div class="timeline">
-
-    <div class="experience-card">
-      <div class="date">JUNE 2026 – AUGUST 2026</div>
-      <h3>Data Strategy & Automation Summer Associate</h3>
-      <p>Philadelphia Insurance Companies (PHLY) · Philadelphia, PA</p>
-
-      <ul>
-        <li>
-          Supported data strategy and automation initiatives
-          through operational reporting, process documentation,
-          data analysis, and process improvement.
-        </li>
-        <li>
-          Analyzed the impact of a soft insurance market on
-          PHLY's Camp Operators product.
-        </li>
-        <li>
-          Developed strategic recommendations presented to
-          the Office of the CEO.
-        </li>
-        <li>
-          Earned first place in the Summer Associate project
-          competition.
-        </li>
-      </ul>
-    </div>
-
-    <div class="experience-card">
-      <div class="date">MAY 2024 – AUGUST 2024</div>
-      <h3>Actuarial Intern</h3>
-      <p>MassMutual · Boston, MA</p>
-
-      <ul>
-        <li>
-          Worked on the Health Experience Studies team to
-          develop a Disability Runout Analysis using SQL,
-          Power BI, and Excel.
-        </li>
-        <li>
-          Helped reduce the runout period and enable
-          near real-time claims monitoring.
-        </li>
-        <li>
-          Presented recommendations to shorten the runout
-          period to stakeholders across organizational levels.
-        </li>
-        <li>
-          Completed simulations in Predictive Modeling,
-          Pricing, Valuation, and Predictive Analytics using
-          R Studio and Excel.
-        </li>
-      </ul>
-    </div>
-
-    <div class="experience-card">
-      <div class="date">AUGUST 2025 – PRESENT</div>
-      <h3>Graduate Assistant</h3>
       <p>
-        Saint Joseph's University · Office of Inclusive Excellence
-        & Institutional Effectiveness
+        Turning data into meaningful insights through analytics,
+        business intelligence, and problem-solving.
       </p>
 
-      <ul>
-        <li>
-          Coordinate and promote Inclusive Excellence programs,
-          mentoring initiatives, and early-arrival programming.
-        </li>
-        <li>
-          Collect, organize, and validate data for the university
-          Strategic Plan Annual Action Plan and Report.
-        </li>
-        <li>
-          Support assessment, continuous improvement, and
-          Middle States accreditation documentation.
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="light">
-  <div class="section-label">TECHNICAL TOOLKIT</div>
-  <h2>Skills & Technologies</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Programming & Databases</h3>
-      <p>R, SQL</p>
-    </div>
-
-    <div class="card">
-      <h3>Data Visualization</h3>
-      <p>Tableau, Power BI, Excel</p>
-    </div>
-
-    <div class="card">
-      <h3>Analytics & Modeling</h3>
-      <p>
-        Predictive Modeling, Statistical Analysis,
-        Pricing, Valuation
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Business & Strategy</h3>
-      <p>
-        Process Improvement, Business Analysis,
-        Operational Reporting, Automation
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TABLEAU DASHBOARD -->
-
-<section id="tableau" class="light">
-  <div class="section-label">DATA VISUALIZATION</div>
-  <h2>Tableau Dashboards</h2>
-
-  <p class="about-text">
-    Explore my interactive data visualizations and dashboards
-    created using Tableau. These projects demonstrate my
-    ability to transform data into meaningful insights
-    through analytical thinking and data storytelling.
-  </p>
-
-  <div class="tableau-card">
-
-    <div class="date">FEATURED DASHBOARD</div>
-
-    <h3 style="color:#17384b; font-size:22px;">
-      Amazon Sales Dashboard
-    </h3>
-
-    <p>
-      An interactive dashboard exploring Amazon sales
-      performance through data visualization and
-      business intelligence.
-    </p>
-
-    <div class="tableauPlaceholder" id="amazonDashboard">
-
-      <noscript>
-        <a href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes">
-          View my Tableau Public profile
-        </a>
-      </noscript>
-
-      <object class="tableauViz" style="display:none;">
-
-        <param name="host_url"
-          value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-
-        <param name="embed_code_version" value="3"/>
-
-        <param name="site_root" value=""/>
-
-        <param name="name"
-          value="AmazonSalesDashboard_17725604039880/Dashboard1"/>
-
-        <param name="tabs" value="no"/>
-
-        <param name="toolbar" value="yes"/>
-
-        <param name="animate_transition" value="yes"/>
-
-        <param name="display_static_image" value="yes"/>
-
-        <param name="display_spinner" value="yes"/>
-
-        <param name="display_overlay" value="yes"/>
-
-        <param name="display_count" value="yes"/>
-
-        <param name="language" value="en-US"/>
-
-      </object>
-    </div>
-
-    <div class="buttons">
-      <a class="button primary"
-        href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
-        target="_blank" rel="noopener">
-        Explore All My Tableau Dashboards →
+      <a class="button" href="#projects">Explore My Work</a>
+      <a class="button button-outline"
+         href="https://www.linkedin.com/in/selynne-ochieng/"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn
       </a>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
 
-<!-- PROJECTS -->
+      <div class="intro">
+        <p>
+          I am a graduate student at Saint Joseph's University pursuing
+          a Master of Science in Business Intelligence & Analytics,
+          with graduate certificates in Data Analytics and Data Science.
+        </p>
 
-<section id="projects">
-  <div class="section-label">SELECTED WORK</div>
-  <h2>Projects & Portfolio</h2>
+        <p style="margin-top: 15px;">
+          With an academic background in business, actuarial science,
+          data science, and mathematics, I am interested in using
+          data to solve business problems, improve processes, and
+          support informed decision-making.
+        </p>
 
-  <p class="about-text">
-    A collection of academic and professional projects
-    demonstrating my analytical, programming, and
-    problem-solving abilities.
-  </p>
+        <p style="margin-top: 15px;">
+          My experience spans insurance, data strategy, automation,
+          reporting, and data visualization. I enjoy exploring how
+          analytics can turn complex information into actionable insights.
+        </p>
+      </div>
+    </section>
 
-  <br>
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
 
-  <div class="grid">
+      <div class="card">
+        <h3>Saint Joseph's University</h3>
+        <p class="meta">Philadelphia, Pennsylvania | Expected May 2027</p>
 
-    <div class="card">
-      <h3>R Programming – Janitor Package</h3>
+        <p><strong>Master of Science in Business Intelligence & Analytics</strong></p>
+        <p>Graduate Certificates in Data Analytics and Data Science</p>
+      </div>
+
+      <div class="card">
+        <h3>Saint Joseph's University</h3>
+        <p class="meta">Philadelphia, Pennsylvania | May 2025</p>
+
+        <p><strong>Bachelor of Science in Business Administration</strong></p>
+        <p>Major: Actuarial Science</p>
+        <p>Minors: Data Science and Mathematics</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="card">
+        <h3>Data Strategy & Automation Summer Associate</h3>
+        <p class="meta">
+          Philadelphia Insurance Companies (PHLY) | June 2026 – August 2026
+        </p>
+
+        <ul>
+          <li>Supported enterprise data strategy, reporting, and process improvement initiatives.</li>
+          <li>Conducted analysis on the impact of soft market conditions on the Camp Operators product.</li>
+          <li>Presented data-driven recommendations to the Office of the CEO.</li>
+          <li>Collaborated with a project team that earned first place in the summer associate project competition.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Graduate Assistant</h3>
+        <p class="meta">
+          Office of Inclusive Excellence & Institutional Effectiveness,
+          Saint Joseph's University | August 2025 – Present
+        </p>
+
+        <ul>
+          <li>Coordinate university programs, events, and student engagement initiatives.</li>
+          <li>Support institutional effectiveness data and reporting for the university's Strategic Plan and Middle States accreditation.</li>
+          <li>Assist with program planning, assessment, and administrative projects.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Actuarial Intern</h3>
+        <p class="meta">MassMutual | May 2024 – August 2024</p>
+
+        <ul>
+          <li>Worked with the Health Experience Studies team on disability claims analysis.</li>
+          <li>Conducted Disability Runout Analysis using SQL, Power BI, and Excel.</li>
+          <li>Supported predictive modeling, pricing, valuation, and analytics simulations using R and Excel.</li>
+          <li>Contributed to improvements in claims monitoring and reporting.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="skills">
+        <span class="skill">SQL</span>
+        <span class="skill">R Programming</span>
+        <span class="skill">Python</span>
+        <span class="skill">SAS Viya</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">Data Visualization</span>
+        <span class="skill">Predictive Analytics</span>
+        <span class="skill">Statistical Modeling</span>
+        <span class="skill">Business Intelligence</span>
+        <span class="skill">Process Improvement</span>
+        <span class="skill">Data Analysis</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects & Academic Work</h2>
+
+      <div class="card">
+        <h3>R Programming – Midterm Presentation</h3>
+        <p class="meta">DSS Coursework | Fall 2026</p>
+        <p>
+          Presentation exploring the janitor package in R and its
+          applications for data cleaning and preparation.
+        </p>
+        <p class="meta">
+          Add your actual presentation file or link here when ready.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Academic Data Analytics Projects</h3>
+        <p class="meta">Saint Joseph's University</p>
+        <p>
+          Applied analytical methods and statistical techniques
+          to explore datasets, build models, and interpret results
+          across business and data analytics coursework.
+        </p>
+        <p class="meta">
+          Add one or two specific projects completed before Fall 2025,
+          along with their files or links.
+        </p>
+      </div>
+    </section>
+
+    <!-- TABLEAU -->
+    <section id="tableau">
+      <div class="tableau-section">
+        <h2>Tableau Public</h2>
+
+        <p>
+          Explore my data visualization projects and interactive
+          dashboards created using Tableau.
+        </p>
+
+        <a
+          class="button"
+          href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
+          target="_blank"
+          rel="noopener noreferrer">
+          View My Tableau Dashboards →
+        </a>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <h2>Achievements & Recognition</h2>
+
+      <div class="card">
+        <ul>
+          <li>1st Place – NAAIA National Talent Development Case Competition, 2023</li>
+          <li>1st Place – CAS Student Central Summer Program, 2023</li>
+          <li>2nd Place – InsurtechNY Final Four Case Competition, 2025</li>
+          <li>1st Place – PHLY Summer Associate Project Competition, 2026</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Let's Connect</h2>
+
       <p>
-        Exploring the janitor package in R for data cleaning,
-        organization, and efficient data analysis.
+        Interested in connecting about data analytics,
+        business intelligence, or professional opportunities?
       </p>
-      <p class="date">MIDTERM PRESENTATION</p>
-    </div>
 
-    <div class="card">
-      <h3>SQL & Claims Analysis</h3>
       <p>
-        Disability Runout Analysis developed during my
-        actuarial internship at MassMutual using SQL,
-        Power BI, and Excel.
+        <a href="mailto:so747325@sju.edu">so747325@sju.edu</a>
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Predictive Modeling</h3>
       <p>
-        Academic and professional analytical work involving
-        predictive modeling, statistical analysis, and
-        actuarial simulations.
+        <a href="https://www.linkedin.com/in/selynne-ochieng/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        |
+        <a href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
+           target="_blank" rel="noopener noreferrer">
+          Tableau Public
+        </a>
+        |
+        <a href="https://github.com/so747325-svg"
+           target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </p>
-    </div>
+    </section>
 
-    <div class="card">
-      <h3>Business Intelligence & Reporting</h3>
-      <p>
-        Business reporting, data visualization, and
-        operational analysis using business intelligence tools.
-      </p>
-    </div>
+  </main>
 
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-
-<section id="achievements" class="light">
-  <div class="section-label">RECOGNITION</div>
-  <h2>Achievements & Awards</h2>
-
-  <div class="grid">
-
-    <div class="card award">
-      <div class="place">1st Place</div>
-      <h3>PHLY Summer Associate Project Competition</h3>
-      <p>Philadelphia Insurance Companies · 2026</p>
-    </div>
-
-    <div class="card award">
-      <div class="place">1st Place</div>
-      <h3>NAAIA National Talent Development Competition</h3>
-      <p>National African American Insurance Association · 2023</p>
-    </div>
-
-    <div class="card award">
-      <div class="place">1st Place</div>
-      <h3>CAS Student Central Summer Program</h3>
-      <p>Casualty Actuarial Society · 2023</p>
-    </div>
-
-    <div class="card award">
-      <div class="place">2nd Place</div>
-      <h3>InsurtechNY Final Four Case Competition</h3>
-      <p>2025</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-  <div class="section-label">GET IN TOUCH</div>
-  <h2>Let's Connect.</h2>
-
-  <p class="about-text">
-    I'm always open to connecting with professionals,
-    exploring new opportunities, and discussing how
-    data can drive meaningful insights.
-  </p>
-
-  <div class="buttons">
-
-    <a class="button primary"
-      href="mailto:so747325@sju.edu">
-      Email Me
-    </a>
-
-    <a class="button"
-      href="https://www.linkedin.com/in/selynne-ochieng/"
-      target="_blank" rel="noopener">
-      LinkedIn
-    </a>
-
-    <a class="button"
-      href="https://github.com/so747325-svg"
-      target="_blank" rel="noopener">
-      GitHub
-    </a>
-
-    <a class="button"
-      href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
-      target="_blank" rel="noopener">
-      Tableau Public
-    </a>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-  <p>© 2026 Selynne Ochieng | Data & Analytics Portfolio</p>
-  <br>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</footer>
-
-<!-- TABLEAU SCRIPT -->
-
-<script type="text/javascript">
-(function () {
-  var divElement = document.getElementById('amazonDashboard');
-  if (!divElement) return;
-
-  var vizElement = divElement.getElementsByTagName('object')[0];
-
-  function resizeDashboard() {
-    var width = divElement.offsetWidth;
-    vizElement.style.width = '100%';
-    vizElement.style.height =
-      Math.max(650, width * 0.68) + 'px';
-  }
-
-  resizeDashboard();
-  window.addEventListener('resize', resizeDashboard);
-
-  var scriptElement = document.createElement('script');
-  scriptElement.src =
-    'https://public.tableau.com/javascripts/api/viz_v1.js';
-
-  vizElement.parentNode.insertBefore(
-    scriptElement, vizElement
-  );
-})();
-</script>
+  <footer>
+    <p>© 2026 Selynne Ochieng | Data & Analytics Portfolio</p>
+  </footer>
 
 </body>
 </html>
