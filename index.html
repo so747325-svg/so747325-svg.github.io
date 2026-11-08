@@ -234,17 +234,6 @@ section h2 {
   margin-top: 25px;
 }
 
-.tableauPlaceholder {
-  width: 100%;
-  position: relative;
-  margin-top: 20px;
-}
-
-.tableauPlaceholder object {
-  width: 100%;
-  height: 750px;
-}
-
 footer {
   padding: 35px;
   text-align: center;
@@ -276,10 +265,6 @@ footer a {
 
   section {
     padding: 60px 8%;
-  }
-
-  .tableauPlaceholder object {
-    height: 650px;
   }
 }
 </style>
@@ -529,14 +514,14 @@ footer a {
   </div>
 </section>
 
-<!-- TABLEAU DASHBOARD -->
+<!-- TABLEAU PUBLIC -->
 
 <section id="tableau" class="light">
   <div class="section-label">DATA VISUALIZATION</div>
   <h2>Tableau Dashboards</h2>
 
   <p class="about-text">
-    Explore my interactive data visualizations and dashboards
+    Explore my data visualizations and dashboards
     created using Tableau. These projects demonstrate my
     ability to transform data into meaningful insights
     through analytical thinking and data storytelling.
@@ -544,62 +529,22 @@ footer a {
 
   <div class="tableau-card">
 
-    <div class="date">FEATURED DASHBOARD</div>
+    <div class="date">TABLEAU PUBLIC PORTFOLIO</div>
 
     <h3 style="color:#17384b; font-size:22px;">
-      Amazon Sales Dashboard
+      Explore My Tableau Dashboards
     </h3>
 
     <p>
-      An interactive dashboard exploring Amazon sales
-      performance through data visualization and
-      business intelligence.
+      Visit my Tableau Public profile to explore my collection
+      of interactive dashboards and data visualization projects.
     </p>
-
-    <div class="tableauPlaceholder" id="amazonDashboard">
-
-      <noscript>
-        <a href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes">
-          View my Tableau Public profile
-        </a>
-      </noscript>
-
-      <object class="tableauViz" style="display:none;">
-
-        <param name="host_url"
-          value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-
-        <param name="embed_code_version" value="3"/>
-
-        <param name="site_root" value=""/>
-
-        <param name="name"
-          value="AmazonSalesDashboard_17725604039880/Dashboard1"/>
-
-        <param name="tabs" value="no"/>
-
-        <param name="toolbar" value="yes"/>
-
-        <param name="animate_transition" value="yes"/>
-
-        <param name="display_static_image" value="yes"/>
-
-        <param name="display_spinner" value="yes"/>
-
-        <param name="display_overlay" value="yes"/>
-
-        <param name="display_count" value="yes"/>
-
-        <param name="language" value="en-US"/>
-
-      </object>
-    </div>
 
     <div class="buttons">
       <a class="button primary"
-        href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
-        target="_blank" rel="noopener">
-        Explore All My Tableau Dashboards →
+         href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
+         target="_blank" rel="noopener noreferrer">
+        View All My Tableau Dashboards →
       </a>
     </div>
 
@@ -628,7 +573,14 @@ footer a {
         Exploring the janitor package in R for data cleaning,
         organization, and efficient data analysis.
       </p>
-      <p class="date">MIDTERM PRESENTATION</p>
+
+      <p class="date">MIDTERM PRESENTATION · FALL 2026</p>
+
+      <a class="project-link"
+         href="R%20Package%20Presentation_%20The%20%E2%80%9Cjanitor%E2%80%9D%20Package%20in%20R.pdf"
+         target="_blank" rel="noopener noreferrer">
+        View Presentation Slides →
+      </a>
     </div>
 
     <div class="card">
@@ -710,25 +662,25 @@ footer a {
   <div class="buttons">
 
     <a class="button primary"
-      href="mailto:so747325@sju.edu">
+       href="mailto:so747325@sju.edu">
       Email Me
     </a>
 
     <a class="button"
-      href="https://www.linkedin.com/in/selynne-ochieng/"
-      target="_blank" rel="noopener">
+       href="https://www.linkedin.com/in/selynne-ochieng/"
+       target="_blank" rel="noopener">
       LinkedIn
     </a>
 
     <a class="button"
-      href="https://github.com/so747325-svg"
-      target="_blank" rel="noopener">
+       href="https://github.com/so747325-svg"
+       target="_blank" rel="noopener">
       GitHub
     </a>
 
     <a class="button"
-      href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
-      target="_blank" rel="noopener">
+       href="https://public.tableau.com/app/profile/selynne.ochieng/vizzes"
+       target="_blank" rel="noopener">
       Tableau Public
     </a>
 
@@ -745,35 +697,6 @@ footer a {
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </footer>
-
-<!-- TABLEAU SCRIPT -->
-
-<script type="text/javascript">
-(function () {
-  var divElement = document.getElementById('amazonDashboard');
-  if (!divElement) return;
-
-  var vizElement = divElement.getElementsByTagName('object')[0];
-
-  function resizeDashboard() {
-    var width = divElement.offsetWidth;
-    vizElement.style.width = '100%';
-    vizElement.style.height =
-      Math.max(650, width * 0.68) + 'px';
-  }
-
-  resizeDashboard();
-  window.addEventListener('resize', resizeDashboard);
-
-  var scriptElement = document.createElement('script');
-  scriptElement.src =
-    'https://public.tableau.com/javascripts/api/viz_v1.js';
-
-  vizElement.parentNode.insertBefore(
-    scriptElement, vizElement
-  );
-})();
-</script>
 
 </body>
 </html>
